@@ -161,7 +161,7 @@ void drawCourt()
   tft.rect(width - 1, 0, 1, height);
   tft.rect(0, height - 1, width, 1);
 
-  // Draw the diving line between the two players:
+  // Draw the dividing line between the two players:
   tft.rect(0, height / 2, width, 1);
 }
 
