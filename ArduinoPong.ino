@@ -41,6 +41,9 @@ boolean rightDown = false;
 
 char printout[4];
 
+/*
+ * The setup method for the Arduino.
+ */
 void setup() 
 { 
   Serial.begin(9600);
@@ -60,6 +63,9 @@ void setup()
   centerBall();
 }
 
+/*
+ * The loop method for the Arduino.
+ */
 void loop() 
 {
   if (gameOver)
@@ -77,6 +83,9 @@ void loop()
   receiveAndProcessIRCommands();
 }
 
+/*
+ * Draws the game over screen stating whether the player won or lost on the TFC LCD.
+ */
 void drawGameOverScreen()
 {
   if (!gameOverScreenDrawn) // We don't want to always draw the game over screen because that will cause flickering...
@@ -409,7 +418,7 @@ boolean intersects(int x, int y, int rectX, int rectY, int rectWidth, int rectHe
 }
 
 /*
- * Receives IR commands from the receiver and processes them.
+ * Receives IR commands and processes them.
  */
 void receiveAndProcessIRCommands()
 {
