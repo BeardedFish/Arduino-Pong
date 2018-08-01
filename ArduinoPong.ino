@@ -1,3 +1,8 @@
+/****************************/
+/*       Arduino Pong       */
+/* By: BeardedFish (Darian) */
+/****************************/
+
 #include <TFT.h>
 #include <SPI.h>
 #include <IRremote.h>
@@ -18,28 +23,28 @@ const int PADDLE_HEIGHT = 5; // The height of the paddle.
 const int BALL_DIMENSIONS = 3; // The length/width of the ball.
 const int MAX_SCORE_TO_WIN = 5; // The maximum score a player needs until it's game over.
 
-int ballDirectionX = 1;
-int ballDirectionY = 1;
+int ballDirectionX = 1; // The X velocity of the game ball.
+int ballDirectionY = 1; // The Y velocity of the game ball.
 
-int paddleX = 0;
-int paddleY = 0;
-int oldPaddleX, oldPaddleY;
+int paddleX = 0; // The X location of the player's paddle.
+int paddleY = 0; // The Y location of the player's paddle.
+int oldPaddleX, oldPaddleY; // The old X and Y locations of the player's paddle.
 
-int opponentX = 0;
-int opponentY = 0;
-int oldOpponentX, oldOpponentY;
+int opponentX = 0; // The X location of the opponent's paddle.
+int opponentY = 0; // The Y location of the opponent's paddle.
+int oldOpponentX, oldOpponentY; // The old X and Y locations of the opponent's paddle.
 
-int ballX, ballY, oldBallX, oldBallY;
-int playerScore, opponentScore;
+int ballX, ballY, oldBallX, oldBallY; // The ball's locations variables.
+int playerScore, opponentScore; // The score of the player and the opponents.
 
-boolean gameOver = false;
-boolean gameOverScreenDrawn = false;
-boolean opponentWon = false;
+boolean gameOver = false; // States whether the game is over or not.
+boolean gameOverScreenDrawn = false; // States whether the game over screen has been drawn or not.
+boolean opponentWon = false; // States whether the opponent won or not.
 
-boolean leftDown = false;
-boolean rightDown = false;
+boolean leftDown = false; // States whether the left button on the IR remote is down or not.
+boolean rightDown = false; // States whether the right button on the IR remote is down or not.
 
-char printout[4];
+char printout[4]; // Used for printing text onto the LCD screen.
 
 /*
  * The setup method for the Arduino.
