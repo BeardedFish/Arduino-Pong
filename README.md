@@ -17,3 +17,9 @@ The parts required for this project are:
 ![alt text](https://github.com/BeardedFish/Arduino-Pong/blob/master/schematic.jpg?raw=true)
 
 **NOTE:** Please know that you can power the entire project without the breadboard power module. If you are going to use the breadboard power module then you are going to need a USB cable plugged into the breadboard power module, having the other end of the USB cable plugged into the Arduino. You are also going to need to have power going into the breadboard power module (such as a 9V battery).
+
+# Video Showcase
+
+Click on the thumbnail image below to be redirected to a YouTube video showing the Arduino Pong project in action.
+
+[![Arduino Pong - Playable via TV Remote](https://img.youtube.com/vi/o3NIqk4AVuU/0.jpg)](https://www.youtube.com/watch?v=o3NIqk4AVuU)
